@@ -21,10 +21,9 @@ body {
 .logo {
     display: inline-block;
     margin-top: 17.5px;
-    width: 200px;
-    height: 50px;
     text-align: left;
     vertical-align: text-bottom;
+    padding-left: 10px;
 }
 
 .align-left {
@@ -41,7 +40,7 @@ body {
     font-size: 32px;
     font-weight: normal;
     color: #2a333d;
-    border-left: 6px solid #212121;
+    
 }
 
 
@@ -100,10 +99,8 @@ body {
     display: flex;
     width: 65%;
     box-sizing: border-box;
-    
     text-align: center;
-    
-    color: white;
+    color: #fff;
     border-radius: 8px;
     background-color: #F0F4C3;
     

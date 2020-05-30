@@ -19,7 +19,7 @@ var c2 = ["Cuenta amiga 2", 7654321];
 
 //Ejecución de las funciones que actualizan los valores de las variables en el HTML.
 
-window.onload = function() {
+window.onload = function () {
     iniciarSesion();
     cargarNombreEnPantalla();
     actualizarSaldoEnPantalla();
@@ -30,7 +30,7 @@ window.onload = function() {
 
 //Validación multiplo de 100
 function validacionMultiploDe100(monto) {
-    if (monto%100 == 0) {
+    if (monto % 100 == 0) {
         return true;
     } else {
         alert("Solo es posible retirar de a multiplos de $100");
@@ -52,11 +52,11 @@ function validacionLimiteExtraccion(monto) {
 function validacionSaldoCuenta(monto) {
     if (monto <= saldoCuenta) {
         return true;
-        } else {
-            alert("Tu saldo es insuficiente");
-            return false;
-        }
+    } else {
+        alert("Tu saldo es insuficiente");
+        return false;
     }
+}
 
 //Validacion valor valido (Obliga al usuario a ingresar un numero en el campo del prompt)
 function valorValido(monto) {
@@ -75,10 +75,9 @@ function cambiarLimiteDeExtraccion() {
 
     if (valorValido(nuevoLimite)) {
         limiteExtraccion = nuevoLimite;
-        alert("Tu nuevo limite de extraccion es: $"+limiteExtraccion);
+        alert("Tu nuevo limite de extraccion es: $" + limiteExtraccion);
         actualizarLimiteEnPantalla();
     }
-
 }
 
 function extraerDinero() {
@@ -86,48 +85,48 @@ function extraerDinero() {
     var monto = parseInt(prompt("Cuanto dinero deseas extraer?"));
 
     //Valido que se cumplan las cuatro condiciones, llamando a funciones anteriores
-    if (    valorValido(monto) &&
-            validacionMultiploDe100(monto) &&
-            validacionLimiteExtraccion(monto) &&
-            validacionSaldoCuenta(monto)    ) {
+    if (valorValido(monto) &&
+        validacionMultiploDe100(monto) &&
+        validacionLimiteExtraccion(monto) &&
+        validacionSaldoCuenta(monto)) {
 
         var saldoAnterior = saldoCuenta;
         saldoCuenta = saldoCuenta - monto;
         actualizarSaldoEnPantalla();
 
-        alert("Has extraido: $"+monto+'\n'+
-        "Saldo anterior: $"+(saldoAnterior)+'\n'+
-        "Saldo actual: $"+saldoCuenta);
-        } 
+        alert("Has extraido: $" + monto + '\n' +
+            "Saldo anterior: $" + (saldoAnterior) + '\n' +
+            "Saldo actual: $" + saldoCuenta);
+    }
 }
 
 function depositarDinero() {
 
     var monto = parseInt(prompt("Cuanto dinero deseas depositar?"));
-    
+
     if (valorValido(monto)) {
 
-    var saldoAnterior = saldoCuenta;
-    saldoCuenta = saldoCuenta + monto;
-    actualizarSaldoEnPantalla();
-    alert("Has depositado: $"+monto+'\n'+
-         "Saldo anterior: $"+(saldoAnterior)+'\n'+
-         "Saldo actual: $"+saldoCuenta);
+        var saldoAnterior = saldoCuenta;
+        saldoCuenta = saldoCuenta + monto;
+        actualizarSaldoEnPantalla();
+        alert("Has depositado: $" + monto + '\n' +
+            "Saldo anterior: $" + (saldoAnterior) + '\n' +
+            "Saldo actual: $" + saldoCuenta);
     }
 }
 
 function pagarServicio() {
-    
+
     //Los servicios disponibles para pagar fueron declarados en la declaracion de variables
-    
+
     //Consulta de servicio a pagar
-    var servicio = prompt("Que servicio desea abonar?"+'\n'+
-                                    "1. "+s1[0]+": $"+s1[1]+'\n'+
-                                    "2. "+s2[0]+": $"+s2[1]+'\n'+
-                                    "3. "+s3[0]+": $"+s3[1]+'\n'+
-                                    "4. "+s4[0]+": $"+s4[1]+'\n'+
-                                    "Ingrese el numero correspondiente al servicio que desea abonar");
-    
+    var servicio = prompt("Que servicio desea abonar?" + '\n' +
+        "1. " + s1[0] + ": $" + s1[1] + '\n' +
+        "2. " + s2[0] + ": $" + s2[1] + '\n' +
+        "3. " + s3[0] + ": $" + s3[1] + '\n' +
+        "4. " + s4[0] + ": $" + s4[1] + '\n' +
+        "Ingrese el numero correspondiente al servicio que desea abonar");
+
     //Traduccion de respuesta del usuario a la variable correspondiente al servicio seleccionado
     switch (servicio) {
         case "1":
@@ -141,68 +140,68 @@ function pagarServicio() {
             break;
         case "4":
             servicio = s4;
-            break ; 
+            break;
         default:
             alert("Intente con un servicio valido");
             return false;
     }
-    
-    
+
+
     //Validacion de saldo disponible en cuenta
     monto = servicio[1];
     if (validacionSaldoCuenta(monto)) {
-        
-        var saldoAnterior = saldoCuenta; 
+
+        var saldoAnterior = saldoCuenta;
         saldoCuenta = saldoCuenta - monto;
         actualizarSaldoEnPantalla();
-        alert("Has pagado el servicio de "+servicio[0]+'\n'+
-              "Saldo anterior: $"+(saldoAnterior)+'\n'+
-              "Dinero descontado: $"+monto+'\n'+
-              "Saldo actual: $"+saldoCuenta);
-        
+        alert("Has pagado el servicio de " + servicio[0] + '\n' +
+            "Saldo anterior: $" + (saldoAnterior) + '\n' +
+            "Dinero descontado: $" + monto + '\n' +
+            "Saldo actual: $" + saldoCuenta);
+
     }
-    
+
 }
 
 function transferirDinero() {
-    
+
     monto = parseInt(prompt("Indique el monto a transferir"));
-    
+
     if (validacionSaldoCuenta(monto)) {
-        
-    var destinoTransferencia = parseInt(prompt("Ingrese el numero de cuenta amiga a la cual desea transferir"));
-        
+
+        var destinoTransferencia = parseInt(prompt("Ingrese el numero de cuenta amiga a la cual desea transferir"));
+
         if (destinoTransferencia == c1[1] || destinoTransferencia == c2[1]) {
-            
-            var saldoAnterior = saldoCuenta; 
+
+            var saldoAnterior = saldoCuenta;
             saldoCuenta = saldoCuenta - monto;
             actualizarSaldoEnPantalla();
-            alert("Has transferido $ "+monto+'\n'+
-                  "Cuenta de destino: "+destinoTransferencia);
-            
+            alert("Has transferido $ " + monto + '\n' +
+                "Cuenta de destino: " + destinoTransferencia);
+
         } else {
             alert("La cuenta ingresada no es valida");
             return false;
         }
-    
+
     }
-    
+
 }
-    
+
 
 function iniciarSesion() {
-    
-   if (parseInt(prompt("Ingrese su PIN:")) == pin) {
-       alert("Bienvenido "+nombreUsuario+". Ya puedes operar en nuestro Home Banking");
-       //El sitio carga correctamente. 
-       
+
+    if (parseInt(prompt("Ingrese su PIN:")) == pin) {
+        alert("Bienvenido " + nombreUsuario + ". Ya puedes operar en nuestro Home Banking");
+        //El sitio carga correctamente. 
+
     } else {
-    saldoCuenta = 0;
-    alert("El PIN es incorrecto. Recargue el sitio e inicie sesión nuevamente."+'\n'+
-          "Por cuestiones de seguridad, su saldo ha sido bloqueado");
-    return false;
+        saldoCuenta = 0;
+        alert("El PIN es incorrecto. Recargue el sitio e inicie sesión nuevamente." + '\n' +
+            "Por cuestiones de seguridad, su saldo ha sido bloqueado");
+        return false;
     }
-    
+
 }
 
 //Funciones que actualizan el valor de las variables en el HTML
