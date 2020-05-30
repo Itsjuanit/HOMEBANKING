@@ -1,44 +1,7 @@
 body {
     margin: 0;
-
-    font-family: "Source Sans Pro", sans-serif;
-
-    background-color: #2a333d;
-}
-
-.avatar {
-    display: inline-block;
-
-    vertical-align: text-bottom;
-}
-
-.logo {
-    display: inline-block;
-    width: 200px;
-    height: 50px;
-
-    text-align: left;
-    vertical-align: text-bottom;
-}
-
-.align-left {
-    display: flex;
-    padding: 8px;
-
-    align-items: center;
-}
-
-.tu-cuenta {
-    padding-left: 24px;
-    margin: 0;
-    margin-left: -30px;
-
-    font-family: "Source Sans Pro";
-    font-size: 32px;
-    font-weight: normal;
-
-    color: #2a333d;
-    border-left: 6px solid #2cc197;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
 }
 
 .header {
@@ -46,9 +9,40 @@ body {
     width: 65%;
     margin: 7% auto 0;
     margin-bottom: 15px;
-
     justify-content: space-between;
 }
+
+.avatar {
+    display: inline-block;
+    vertical-align: text-bottom;
+    max-height: 50px;
+}
+
+.logo {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    text-align: left;
+    vertical-align: text-bottom;
+}
+
+.align-left {
+    display: flex;
+    padding: 8px;
+    align-items: center;
+}
+
+.tu-cuenta {
+    padding-left: 24px;
+    margin: 0;
+    margin-left: -30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+    color: #2a333d;
+    border-left: 6px solid #2cc197;
+}
+
 
 .cuenta-info {
     display: block;
@@ -59,33 +53,26 @@ body {
     display: inline-block;
     margin-right: 10px;
     overflow: hidden;
-
     font-size: 14px;
-
     text-overflow: ellipsis;
-
     color: #fff;
 }
 
 .links {
     position: relative;
-
     display: block;
     padding: 0;
     margin: 20px 0;
     margin-bottom: 30px;
-
-    font-family: "Source Sans Pro";
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
-
     cursor: pointer;
     -webkit-transition: all .6s ease-in-out;
-       -moz-transition: all .6s ease-in-out;
-         -o-transition: all .6s ease-in-out;
-            transition: all .6s ease-in-out;
+    -moz-transition: all .6s ease-in-out;
+    -o-transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;
     text-align: left;
     vertical-align: text-bottom;
-
     color: #666;
     border: 0;
     background-color: transparent;
@@ -93,7 +80,6 @@ body {
 
 .links:hover {
     margin-left: 10px;
-
     color: #2cc197;
 }
 
@@ -184,7 +170,7 @@ body {
     }
 }
 
-.footer{
+.footer {
     width: 97%;
     height: 60px;
     text-align: center;
