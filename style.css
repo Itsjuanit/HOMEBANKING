@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #fafafa;
+    background-color: #AFB42B;
 }
 
 .header {
@@ -20,6 +20,7 @@ body {
 
 .logo {
     display: inline-block;
+    margin-top: 17.5px;
     width: 200px;
     height: 50px;
     text-align: left;
@@ -40,22 +41,20 @@ body {
     font-size: 32px;
     font-weight: normal;
     color: #2a333d;
-    border-left: 6px solid #2cc197;
+    border-left: 6px solid #212121;
 }
 
 
-.cuenta-info {
-    display: block;
-    width: 100%;
-}
 
 #nombre {
     display: inline-block;
+    margin-top: 34px;
     margin-right: 10px;
     overflow: hidden;
-    font-size: 14px;
+    font-size: 1.3em;
+    font-weight: 500;
     text-overflow: ellipsis;
-    color: #fff;
+    color: #212121;
 }
 
 .links {
@@ -73,14 +72,14 @@ body {
     transition: all .6s ease-in-out;
     text-align: left;
     vertical-align: text-bottom;
-    color: #666;
+    color: #757575;
     border: 0;
     background-color: transparent;
 }
 
 .links:hover {
     margin-left: 10px;
-    color: #2cc197;
+    color: #8BC34A;
 }
 
 .white-container {
@@ -89,11 +88,11 @@ body {
     padding: 30px;
     margin: 0 auto;
     box-sizing: border-box;
-
-    border: 1px solid #979797;
+    
+    border: 1px solid #8BC34A;
     border-radius: 8px;
-    background-color: #fff;
-
+    background-color: #fafafa;
+    
     justify-content: center;
 }
 
@@ -101,14 +100,20 @@ body {
     display: flex;
     width: 65%;
     box-sizing: border-box;
-
+    
     text-align: center;
-
+    
     color: white;
     border-radius: 8px;
-    background-color: #2cc197;
-
+    background-color: #F0F4C3;
+    
     align-items: center;
+}
+
+.cuenta-info {
+    display: block;
+    width: 100%;
+    color: #212121;
 }
 
 .menu-container {
