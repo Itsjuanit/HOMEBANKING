@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 65%;
+  margin: 7% auto 0;
+  margin-bottom: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .header .logo {
+  color: #fff;
+  display: inline-block;
+  margin-top: 17.5px;
+  text-align: left;
+  vertical-align: text-bottom;
+  padding-left: 10px;
+}
+
+body .header .align-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .header .align-left #nombre {
+  display: inline-block;
+  margin-top: 34px;
+  margin-right: 10px;
+  overflow: hidden;
+  font-size: 1.3em;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+
+body .header .align-left .avatar {
+  display: inline-block;
+  vertical-align: text-bottom;
+  max-height: 50px;
+}
+
+body .white-container {
+  background-color: rgba(255, 255, 255, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 65%;
+  padding: 30px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .white-container .menu-container {
+  display: block;
+  width: 35%;
+  padding-right: 20px;
+}
+
+body .white-container .menu-container .tu-cuenta {
+  padding-left: 24px;
+  margin: 0;
+  margin-left: -30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  color: #fff;
+}
+
+body .white-container .menu-container .links {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 20px 0;
+  margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+  text-align: left;
+  color: #fff;
+  border: 0;
+  background-color: transparent;
+}
+
+body .white-container .menu-container .links:hover {
+  margin-left: 10px;
+  color: #fff;
+}
+
+body .green-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 65%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .green-container .cuenta-info {
+  display: block;
+  width: 100%;
+  color: #fff;
+}
+
+body .green-container .cuenta-info #saldo-cuenta {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  overflow: hidden;
+  font-size: 6.5vw;
+  color: #fff;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+body .green-container .cuenta-info #limite-extraccion {
+  overflow: hidden;
+  font-size: 15px;
+  text-overflow: ellipsis;
+}
+
+body .footer {
+  width: 97%;
+  height: 60px;
+  text-align: center;
+  padding: 1em;
+}
+
+body .footer .boton {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.2em;
+  position: relative;
+  text-decoration: none;
+}
+
+body .footer .boton::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  border-radius: 42px 42px 42px 42px;
+}
+
+body .footer .boton:hover::before {
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  body .white-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  body .green-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  body #saldo-cuenta {
+    font-size: 8.5vw;
+  }
+  body .menu-container {
+    width: 100%;
+  }
+  body .header {
+    margin-bottom: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .logo {
+    margin-bottom: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
